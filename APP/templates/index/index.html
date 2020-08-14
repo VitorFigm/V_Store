@@ -1,0 +1,64 @@
+{% extends 'base/base.html' %}
+
+{% load static %}
+
+{% block page %}
+
+
+<section>
+
+    <div id="container">
+
+        <div class="text">
+
+            <h1>Hi, welcome to the V store, </h1>
+
+            <div>A cellphone shop simulator</div>
+
+        </div>
+
+
+        <div class="interval">
+            <!--    <img src="{% static 'imgs/loading.svg' %}">   
+
+                <p>Loading...</p>      delete commend tag to a loading bar  -->  
+        </div> 
+        <!---Interval between div that serves as loading page too-->
+
+
+
+        <div id="recommends_container">
+
+            {% if query != "" %}
+                <h1>Results for: "{{query}}"</h1>
+            {% else %}
+                <h1>Highest Rated</h1>
+            {% endif %}
+            
+            <!----recomendations---->
+            {% include 'index/recommends.html' %}
+            
+            <!----pagination system---->
+            {% include 'index/page.html' %}
+            
+            <h1>Help to find a cellphone</h1>
+            <div onclick="onclick_event_animation_control('menu',true, true, '1s',false,no_wait=true)" id="find_a_cell">find with filters</div>
+        </div>
+
+
+
+
+    </div>
+
+</section>
+{% block filter_script %}
+
+{% endblock %}
+
+
+
+{% endblock %}
+
+
+
+

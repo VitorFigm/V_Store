@@ -1,0 +1,21 @@
+#scroll{
+    z-index: 100;
+    animation: scroll_move 1s infinite;
+    position: fixed;
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.568);
+    top: 95vh;
+    text-align: center;
+    width: 100%;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@keyframes scroll_move{
+    50%{
+        transform: translateY(-5vh);  
+    }
+}

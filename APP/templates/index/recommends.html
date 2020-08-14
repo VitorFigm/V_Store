@@ -1,0 +1,50 @@
+{% load static %}
+
+<div id="recommends">
+                
+    <script>
+        function limiting_name(id){
+            const el = document.getElementById(id)
+            let name = el.innerHTML
+            name = name.slice(0,40) +"..."
+            el.innerHTML = name
+        }
+    </script>
+
+    {% for title,price,image,url in products %}
+        
+        
+
+        <a class="product_box" target="_blank" rel="noopener noreferrer" href="{{url}}">
+
+            <div class='name'> <div id="{{image}}_name">{{title}}</div> </div>
+        
+            <div class='img'>   <img src = "{% static image %}" id="{{image}}">  </div>    
+                <div class='price'> $ {{price}} </div>
+
+            <script>
+                limiting_name('{{image}}_name')
+            </script>
+        </a>
+
+        <script>
+        
+        //keeping image ratio with js
+            img = document.getElementById('{{image}}')
+            ratio = img.width/img.height 
+
+            img.style.height = "50%"
+            img.style.width = (img.style.height*ratio)+"%"
+
+            
+            delete img
+            delete ratio
+            
+        </script>
+        
+    
+    {% endfor %}
+
+
+        
+</div>

@@ -1,0 +1,51 @@
+{% load static %}
+
+<div id="page">
+
+    <script>
+
+        function page_href(my_page,next){
+            let to_page
+
+            if(next) to_page = parseInt(my_page)+1
+            else to_page = parseInt(my_page)-1
+
+            //insert the page number in the url
+            let url = window.location.href
+            let arr = url.split("/")
+            let path_final = arr[arr.length-1]
+            let href = "/"+to_page+"/"+path_final
+
+            if(next)document.getElementById('next_page').href = href
+            else document.getElementById('prev_page').href = href
+        }
+    </script>
+
+
+    {% if page != 1 %}
+        <a href="" id="prev_page"> < </a>
+
+        <script>
+            page_href('{{page}}',false) 
+       </script>
+
+    {% else %}
+        <a class="inactivated"> < </a>
+    {% endif %}
+
+    
+    <div>Page: {{page}} of {{total_page}}</div> 
+    
+
+    {% if page != total_page %}
+        <a href="" id="next_page"> > </a>
+        <script>
+            page_href('{{page}}',true) 
+       </script>
+    {% else %}
+        <a class="inactivated"> > </a>
+    
+    {% endif %}
+
+    
+</div>

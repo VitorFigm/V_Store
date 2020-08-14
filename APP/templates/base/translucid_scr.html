@@ -1,0 +1,20 @@
+{% load static %}
+
+<script>
+    function trans_scr_onclick_control(){
+        let target;
+        if(document.getElementById('menu').visible)target='menu'
+        if(document.getElementById('menu2').visible)target='menu2'
+
+        onclick_event_animation_control(target,true, true, '1s',false,no_wait=true)
+    }
+    </script>
+    <div 
+        id="transluc_scr" onclick="trans_scr_onclick_control()">  <!---Works on menus--->
+    </div>
+
+    
+    <div 
+        id="transluc_scr_for_mobile_search" onclick="onclick_event_animation_control('search',visible_start=true, transluc_scr_control=false, time='1s',mobile_search=true,no_wait=true)">
+        <!---Works on search, low resolution activates the translucid_screen when target--->
+    </div>

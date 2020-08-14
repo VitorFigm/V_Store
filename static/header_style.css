@@ -1,0 +1,49 @@
+@font-face{
+    src:url('fonts/ShadowsIntoLight-Regular.ttf');
+    font-family: ShadowsIntoLight;
+}
+@font-face{
+    src: url('fonts/MuseoModerno-VariableFont_wght.ttf');
+    font-family: Museo;
+}
+
+body{
+    width: 100%;
+    font-family: Museo;
+    margin:0px;
+    padding: 0px;
+    font-size: 21px;
+    background-color: #FFF159;
+    
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+
+header{
+    z-index: 100;
+    position: fixed;
+    margin-top: 2rem;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 5rem calc(100vw - 10rem) 5rem ;
+    grid-template-rows: 4rem 4rem;
+    grid-template-areas: 'logo bar  hamb'
+                         '. btns .'; 
+}
+@media (min-width:800px){
+    header{
+        grid-template-columns: 12rem calc(100vw - 24rem) 12rem ;
+    }
+}
+
+
+
+
+
+
+
+
+
+

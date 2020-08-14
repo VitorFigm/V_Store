@@ -1,0 +1,43 @@
+{% load static %}
+
+<header>
+    <a id="logo" href="/">
+        <img src="{% static 'imgs/logo.svg' %}">
+    </a>
+
+
+    <form action="/filter" name="query_form">
+        <input type="hidden" name="query" id="query_input_form">
+        <input type="hidden" name="query_only" value="True">
+    </form>
+
+    <script>
+        function query_with_search_bar(event){
+            if(event.keyCode==13||event.clientX!=undefined){ //detect enter key to submit the form
+                document.getElementById('query_input_form').value = document.getElementById('seach_input').value
+                document.query_form.submit()
+            }
+        }
+        function search_events_to_mobile(e){   ///prevents resize events to fire when writing
+            if(e=='focus')document.getElementById('search').mobile_resize_control = true
+            if(e=='blur')document.getElementById('search').mobile_resize_control = false
+        }
+    </script>
+    <!---search-->
+    <div id="search" class='my_menu'>
+        <input type="text" name="query" onkeydown="query_with_search_bar(event)" onfocus="search_events_to_mobile('focus')" onblur="search_events_to_mobile('blur')" id="seach_input">
+        <img src="{% static 'imgs/search_btn2.svg' %}" id="bar_btn" onclick="query_with_search_bar(event)">
+
+    </div>
+
+    <div id="user_btns" class='my_menu'>
+        
+    </div>
+
+    <div id="hamb" onclick="onclick_event_animation_control('menu2',true, true, '1s',false,no_wait=true)">
+        <img src="{% static 'imgs/hamb.svg' %}">
+    </div>
+
+    <img src="{% static 'imgs/search_btn.svg' %}" alt="" id='mobile_search' onclick="onclick_event_animation_control('search',visible_start=true, transluc_scr_control=false, time='1s',mobile_search=true,no_wait=true)">
+
+</header> 

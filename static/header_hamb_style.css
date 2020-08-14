@@ -1,0 +1,11 @@
+ #hamb{
+     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: hamb;
+    width: 100%;
+}
+ #hamb img{
+    width: 2rem;
+}
