@@ -23,7 +23,10 @@
                 document.getElementById('search').mobile_resize_control = true;
                 document.getElementById('transluc_scr_for_mobile_search').style.display = 'flex'
             }
-            if(e=='blur')document.getElementById('search').mobile_resize_control = false
+            if(e=='blur'){
+                document.getElementById('search').mobile_resize_control = false
+                document.getElementById('transluc_scr_for_mobile_search').style.display = 'none'
+            }
 
         }
     </script>
@@ -42,6 +45,6 @@
         <img src="{% static 'imgs/hamb.svg' %}">
     </div>
 
-    <img src="{% static 'imgs/search_btn.svg' %}" alt="" id='mobile_search' onclick="onclick_event_animation_control('search',visible_start=true, transluc_scr_control=false, time='1s',mobile_search=true,no_wait=true)">
+    <img src="{% static 'imgs/search_btn.svg' %}" alt="" id='mobile_search' onclick="onclick_event_animation_control('search',visible_start=false, transluc_scr_control=false, time='1s',mobile_search=true,no_wait=true)">
 
 </header> 

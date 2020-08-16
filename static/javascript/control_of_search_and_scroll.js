@@ -60,7 +60,7 @@ window.onresize = function(){
     const menu = document.getElementById(name_of_el)
     const mobile_search_el = document.getElementById('mobile_search')
     //properties
-    if(menu.visible==undefined)menu.visible=visible_start  ///set the visible property in element if not defined
+    if(menu.visible==undefined){menu.visible=visible_start;console.log('definiu undefined')}  ///set the visible property in element if not defined
     if(menu.wait_anim_end==undefined)menu.wait_anim_end=false   //prevent animation conflict
     
     if(menu.visible){
@@ -113,6 +113,6 @@ window.onresize = function(){
 
  function onclick_event_animation_control(name_of_el,visible_start=true, transluc_scr_control=true, time="1s",mobile_search=false,no_wait=false){  //to put in the elements that calls the visibility animation
     const el = document.getElementById(name_of_el)
-    el.visible = !el.visible
+    if(el.visible !=undefined)el.visible = !el.visible
     el_visibility_animation_control(name_of_el,visible_start, transluc_scr_control, time, mobile_search,no_wait)
 }
