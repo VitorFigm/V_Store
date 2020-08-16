@@ -9,6 +9,7 @@ window.scroll_position_before = this.scrollY
 window.onscroll = function(e){  
     //vars
     const scroll = document.getElementById('scroll')
+    const search = document.getElementById('search')
     //check if the scroll is at the end of the page, if it's, scroll image disappears
     if( this.scrollY>(document.body.offsetHeight-this.innerHeight-2) ){
         scroll.style.opacity = '0'
@@ -17,13 +18,12 @@ window.onscroll = function(e){
 
     if(window.innerWidth>=500){item_to_desappier='search';anim_time="1s"}   //changes the item that receive the animation acordding to screen resolution
     else {item_to_desappier='mobile_search';anim_time="1s"}
-
     //check if user scroll up or scroll down
-
-    if(this.scrollY>=window.scroll_position_before){   ///scroll down
+    //mobile_resize_control prevents change in search when focus event in input of search is happening
+    if(this.scrollY>=window.scroll_position_before&&!search.mobile_resize_control){   ///scroll down
         document.getElementById(item_to_desappier).visible = false
         el_visibility_animation_control(item_to_desappier, visible_start=false, transluc_scr_control=false,time=anim_time)
-    }else{  //scroll up
+    }else if(!search.mobile_resize_control){  //scroll up
         document.getElementById(item_to_desappier).visible = true
         el_visibility_animation_control(item_to_desappier, visible_start=false, transluc_scr_control=false,time=anim_time)
     }
