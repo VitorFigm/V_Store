@@ -21,11 +21,11 @@
         function search_events_to_mobile(e){   ///prevents resize events to fire when writing
             if(e=='focus'){
                 document.getElementById('search').mobile_resize_control = true;
-                document.getElementById('transluc_scr_for_mobile_search').style.display = 'flex'
+                document.getElementById('transluc_scr_for_search').style.display = 'flex'
             }
             if(e=='blur'){
                 document.getElementById('search').mobile_resize_control = false
-                document.getElementById('transluc_scr_for_mobile_search').style.display = 'none'
+                document.getElementById('transluc_scr_for_search').style.display = 'none'
             }
 
         }

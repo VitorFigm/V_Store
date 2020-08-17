@@ -15,16 +15,23 @@ window.onscroll = function(e){
         scroll.style.opacity = '0'
     }else scroll.style.opacity = '1'
 
-
+    let item_to_desappier;
     if(window.innerWidth>=500){item_to_desappier='search';anim_time="1s"}   //changes the item that receive the animation acordding to screen resolution
     else {item_to_desappier='mobile_search';anim_time="1s"}
+    ////creating object
+    let my_object = document.getElementById(item_to_desappier)
+    //check if the scroll is at the start of the page, if it's, search will be visible
+    if(this.scrollY==0){
+        my_object.visible = true
+        el_visibility_animation_control(item_to_desappier, visible_start=false, transluc_scr_control=false,time=anim_time,false,no_wait=true)
+    }
     //check if user scroll up or scroll down
     //mobile_resize_control prevents change in search when focus event in input of search is happening
-    if(this.scrollY>=window.scroll_position_before&&!search.mobile_resize_control){   ///scroll down
-        document.getElementById(item_to_desappier).visible = false
+    else if(this.scrollY>=window.scroll_position_before&&!search.mobile_resize_control){   ///scroll down
+        my_object.visible = false
         el_visibility_animation_control(item_to_desappier, visible_start=false, transluc_scr_control=false,time=anim_time)
     }else if(!search.mobile_resize_control){  //scroll up
-        document.getElementById(item_to_desappier).visible = true
+        my_object.visible = true
         el_visibility_animation_control(item_to_desappier, visible_start=false, transluc_scr_control=false,time=anim_time)
     }
 
@@ -45,7 +52,6 @@ window.onresize = function(){
             search.style.display = 'none'
             document.getElementById('mobile_search').style.display = 'none'
             clearInterval(ev)
-            //console.log('not tip')
          }
 
     },500)
@@ -56,15 +62,15 @@ window.onresize = function(){
  function el_visibility_animation_control(name_of_el,visible_start=true, transluc_scr_control=true, time="1s",mobile_search=false,no_wait=false){ //control if the element will appear or not
     //elements
     const trans = document.getElementById('transluc_scr')
-    const trans_mobile = document.getElementById('transluc_scr_for_mobile_search') 
+    const trans_mobile = document.getElementById('transluc_scr_for_search') 
     const menu = document.getElementById(name_of_el)
     const mobile_search_el = document.getElementById('mobile_search')
     //properties
-    if(menu.visible==undefined){menu.visible=visible_start;console.log('definiu undefined')}  ///set the visible property in element if not defined
+    if(menu.visible==undefined)menu.visible=visible_start  ///set the visible property in element if not defined
     if(menu.wait_anim_end==undefined)menu.wait_anim_end=false   //prevent animation conflict
     
     if(menu.visible){
-        if(!menu.wait_anim_end){ //only play animation if there's no animation playing
+        if(!menu.wait_anim_end||no_wait){ //only play animation if there's no animation playing
             menu.wait_anim_end=true  //block play of another animation
     
             menu.style.display = 'flex'   
