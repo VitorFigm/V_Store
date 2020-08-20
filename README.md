@@ -23,7 +23,7 @@ All of the 594 products were taken from Amazon's database
 # Technologies Used
 ### Django:
 To make the back-end
-### Pandas
+### Pandas:
 The Amazon's products were taken from this dataframe:
 https://www.kaggle.com/grikomsn/amazon-cell-phones-reviews   (Python's request library was used to download all the images)
 ### Html and CSS:
