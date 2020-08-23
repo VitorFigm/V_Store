@@ -12,27 +12,38 @@
     </form>
 
     <script>
+        
         function query_with_search_bar(event){
             if(event.keyCode==13||event.clientX!=undefined){ //detect enter key to submit the form
                 document.getElementById('query_input_form').value = document.getElementById('seach_input').value
                 document.query_form.submit()
             }
         }
-        function search_events_to_mobile(e){   ///prevents resize events to fire when writing
-            if(e=='focus'){
-                document.getElementById('search').mobile_resize_control = true;
+        function search_events(what_event){
+
+            if(what_event=='focus'){
+                document.getElementById('search').block_scroll_control = true;
                 document.getElementById('transluc_scr_for_search').style.display = 'flex'
+
+                ///requesting fullscreen in mobile
+                if(window.matchMedia( "(hover: none)" ).matches)
+                    document.getElementsByTagName('body')[0].requestFullscreen()
             }
-            if(e=='blur'){
-                document.getElementById('search').mobile_resize_control = false
-                document.getElementById('transluc_scr_for_search').style.display = 'none'
+
+            if(what_event=='blur'){
+                document.getElementById('search').block_scroll_control = false
+                //exiting fullscreen in mobile
+                if(window.matchMedia( "(hover: none)" ).matches)
+                    document.exitFullscreen()
             }
 
         }
+
+
     </script>
     <!---search-->
     <div id="search" class='my_menu'>
-        <input type="text" name="query" onkeydown="query_with_search_bar(event)" onfocus="search_events_to_mobile('focus')" onblur="search_events_to_mobile('blur')" id="seach_input">
+        <input type="text" name="query" onkeydown="query_with_search_bar(event)" id="seach_input" onfocus="search_events('focus')" onblur="search_events('blur')">
         <img src="{% static 'imgs/search_btn2.svg' %}" id="bar_btn" onclick="query_with_search_bar(event)">
 
     </div>
@@ -41,10 +52,10 @@
         
     </div>
 
-    <div id="hamb" onclick="onclick_event_animation_control('menu2',true, true, '1s',false,no_wait=true)">
+    <div id="hamb" onclick="onclick_event_animation_control('menu2',true, true, '1s',false,true)">
         <img src="{% static 'imgs/hamb.svg' %}">
     </div>
 
-    <img src="{% static 'imgs/search_btn.svg' %}" alt="" id='mobile_search' onclick="onclick_event_animation_control('search',visible_start=false, transluc_scr_control=false, time='1s',mobile_search=true,no_wait=true)">
+    <img src="{% static 'imgs/search_btn.svg' %}" alt="" id='mobile_search' onclick="onclick_event_animation_control('search',true, false, '1s',true,true)">
 
 </header> 

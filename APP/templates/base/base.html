@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The V store</title>
     <!--statics-->
-
+    <link rel="stylesheet" href="{% static 'base_style.css' %}">
     <link rel="stylesheet" href="{% static 'header_style.css' %}">
     <link rel="stylesheet" href="{% static 'header_logo_style.css' %}">
     <link rel="stylesheet" href="{% static 'header_search_style.css' %}">
@@ -19,7 +19,9 @@
 </head>
 
 <body>
-       {% include 'base/header.html' %}
+
+<div id="fullscreen_control"> <!---we need this div to keep the background color when we full screen with javascript--->
+    {% include 'base/header.html' %}
 
     <div id="scroll">
         V
@@ -37,11 +39,15 @@
     {% block page %}
 
     {% endblock %}
+</div>
 
     
 </body>
     <!---javascript_front_end-->
-    <script src="{% static 'javascript/control_of_search_and_scroll.js' %}"></script>
+        <!---control_of_search_and_scroll--->
+    <script src="{% static 'javascript/control_of_search_and_scroll/scroll_event.js' %}"></script>
+    <script src="{% static 'javascript/control_of_search_and_scroll/on_resize_event.js' %}"></script>
+    <script src="{% static 'javascript/control_of_search_and_scroll/animation_control.js' %}"></script>
 
 </html>
 
