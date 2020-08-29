@@ -10,10 +10,10 @@ section::-webkit-scrollbar {
 }
 
 section #container .text{
-    width: 80vw;
+    width: 80%;
     height: 100vh;
     position: relative;
-    left: 10vw;
+    left: 10%;
 
     font-size: 2rem;
     font-family: ShadowsIntoLight;
@@ -64,7 +64,7 @@ section #container #recommends_container h1{
 
 
 section #recommends{
-    width: 70vw;
+    width: 70%;
     font-family: Museo;
     display: flex;
     justify-content: space-evenly;
@@ -72,7 +72,7 @@ section #recommends{
 }
 @media (hover: none) and (max-width:500px){
     section #recommends{
-        width: 90vw;
+        width: 90%;
     }
 
 }

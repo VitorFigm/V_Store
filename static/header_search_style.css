@@ -13,8 +13,8 @@ header #search{
         display: none;
         position: absolute;
         top: 5rem;
-        width: 90vw;
-        left: 5vw;
+        width: 90%;
+        left: 5%;
         height: 4rem;
         grid-area: none;
     }
@@ -61,7 +61,7 @@ header #mobile_search{
     position: absolute;
     transform: translateX();
     width: 3rem;
-    left: calc((100vw - 3rem )/2);
+    left: calc((100% - 3rem )/2);
 }
 
 
