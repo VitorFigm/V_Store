@@ -1,7 +1,5 @@
 window.first_resolution = window.innerWidth //to control of resize
 window.onresize = () => {
-    console.log('first_resolution:'+this.first_resolution)
-    console.log('innerWidth:'+this.innerWidth)
     ///elements
     const search = document.getElementById('search')
     const mobile_search = document.getElementById('mobile_search')

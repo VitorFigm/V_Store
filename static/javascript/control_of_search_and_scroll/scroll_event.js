@@ -21,18 +21,20 @@ window.onscroll = (e) => {
     ////creating object
     let my_object = document.getElementById(item_to_desappier)
     //check if the scroll is at the start of the page, if it's, search will be visible
+    let args1 = {visible_start:false, transluc_scr_control:false,time:anim_time, mobile_search:false, no_wait:true}
+    let args2 = {...args1,no_wait:false}
     if(this.scrollY==0){
         my_object.visible = true
-        el_visibility_animation_control(item_to_desappier, visible_start=false, transluc_scr_control=false,time=anim_time,false,no_wait=true)
+        el_visibility_animation_control(item_to_desappier, args1)
     }
     //check if user scroll up or scroll down
     //mobile_resize_control prevents change in search when focus event in input of search is happening
     else if(this.scrollY>=window.scroll_position_before&&!search.block_scroll_control){   ///scroll down
         my_object.visible = false
-        el_visibility_animation_control(item_to_desappier, visible_start=false, transluc_scr_control=false,time=anim_time)
+        el_visibility_animation_control(item_to_desappier, args2)
     }else if(!search.block_scroll_control){  //scroll up
         my_object.visible = true
-        el_visibility_animation_control(item_to_desappier, visible_start=false, transluc_scr_control=false,time=anim_time)
+        el_visibility_animation_control(item_to_desappier, args2)
     }
 
     //save position

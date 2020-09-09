@@ -51,11 +51,10 @@
     <div id="user_btns" class='my_menu'>
         
     </div>
-
-    <div id="hamb" onclick="onclick_event_animation_control('menu2',true, true, '1s',false,true)">
+    <div id="hamb" onclick="onclick_event_animation_control('menu2')">
         <img src="{% static 'imgs/hamb.svg' %}">
     </div>
 
-    <img src="{% static 'imgs/search_btn.svg' %}" alt="" id='mobile_search' onclick="onclick_event_animation_control('search',true, false, '1s',true,true)">
+    <img src="{% static 'imgs/search_btn.svg' %}" alt="" id='mobile_search' onclick="onclick_event_animation_control('search',{transluc_scr_control:false, time:'1s',mobile_search:true})">
 
 </header> 

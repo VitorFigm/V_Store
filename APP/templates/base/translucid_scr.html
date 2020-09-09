@@ -6,13 +6,13 @@
         if(document.getElementById('menu').visible)target='menu'
         if(document.getElementById('menu2').visible)target='menu2'
 
-        onclick_event_animation_control(target,true, true, '1s',false,true)
+        onclick_event_animation_control(target)
     }
     </script>
     <div 
         id="transluc_scr" onclick="trans_scr_onclick_control()">  <!---Works on menus--->
     </div>
-    <div 
-        id="transluc_scr_for_search" onclick="onclick_event_animation_control('search',false, false, '1s',true,true)">
+    <div                                                                        
+        id="transluc_scr_for_search" onclick="onclick_event_animation_control('search',{visible_start:false, transluc_scr_control:false,mobile_search:true} )">
         <!---Works on search focus event and low resolution activates the translucid_screen when user clicks in the mobile_search button--->
     </div>
