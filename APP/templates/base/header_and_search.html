@@ -1,0 +1,47 @@
+{% load static %}
+<header id="header">
+    <a href="/" id="logo"> </a>
+
+        <div id="options_bellow_search">
+            <a href="" id="contact">Contact me</a>
+        </div>
+       
+     <div id="header_btns">
+        <img src="{% static 'imgs/search_btn.svg' %}" id="search_mobile_btn" 
+        onclick="show_hide_anim({
+        search:'moving_in', 
+        search_translucid_screen:'fade_in98',
+        })">
+
+        <img src="{% static 'imgs/hamb.svg' %} " id="hamb" onclick="show_hide_anim({menu_screen:'fade_in', menu:'moving_in'})">
+    </div>
+   
+
+</header>
+
+
+
+<script>
+    function query_with_search_bar(event){
+        if(event.keyCode==13||event.clientX!=undefined){ //detect enter key to submit the form
+            get_el('query_input_form').value = get_el('search_input').value
+            document.query_form.submit()
+        }
+    }
+</script>
+
+<form action="/filter" name="query_form">
+    <input type="hidden" name="query" id="query_input_form">
+    <input type="hidden" name="query_only" value="True">
+</form>
+
+<div id="search_translucid_screen" 
+    onclick="show_hide_anim({
+    search:'moving_out',
+     search_translucid_screen:'fade_out',
+     })"></div>
+    
+    <div id="search">
+        <input type="text" id="search_input" onkeydown="query_with_search_bar(event)">
+        <img src="{% static 'imgs/search_btn2.svg' %}">
+</div>

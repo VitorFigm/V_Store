@@ -1,0 +1,20 @@
+@font-face{
+    src:url("fonts/NanumGothic-Regular.ttf");
+    font-family: gothic;
+}
+@font-face{
+    src:url("fonts/ShadowsIntoLight-Regular.ttf");
+    font-family: shadow;
+}
+@font-face{
+    src:url("fonts/MuseoModerno-VariableFont_wght.ttf");
+    font-family: Museo;
+}
+
+body{
+    background-color:#3D8268;
+    width:100%;
+    margin:0px;
+    font-family: Museo;
+    font-size:14pt;
+}

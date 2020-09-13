@@ -17,10 +17,10 @@
             let href = "/"+to_page+"/"+path_final
 
             //go to container after click in button
-            if(!href.includes("#recommends_container"))href+="#recommends_container"
+            if(!href.includes("#recommendation"))href+="#recommendation"
 
-            if(next)document.getElementById('next_page').href = href
-            else document.getElementById('prev_page').href = href
+            if(next)get_el('next_page').href = href
+            else get_el('prev_page').href = href
         }
     </script>
 

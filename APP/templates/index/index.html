@@ -6,51 +6,39 @@
 
 
 <section>
+    <div class="container" id="intro">
 
-    <div id="container">
+       <h1>Hi, welcome to the V store, </h1>
 
-        <div class="text">
+       <p>A cellphone shop simulator</p>
 
-            <h1>Hi, welcome to the V store, </h1>
+   </div>
+   <div class="blank_interval"></div>
+   <div id="recommendation" class="container">
+        <div class="blank_interval"></div>
 
-            <div>A cellphone shop simulator</div>
+        {% if query != "" %}
+            <h1>Results for: "{{query}}"</h1>
+        {% else %}
+            <h1>Highest Rated</h1>
+        {% endif %}    
 
-        </div>
-
-
-        <div class="interval">
-            <!--    <img src="{% static 'imgs/loading.svg' %}">   
-
-                <p>Loading...</p>      delete commend tag to a loading bar  -->  
-        </div> 
-        <!---Interval between div that serves as loading page too-->
-
-
-
-        <div id="recommends_container">
-
-            {% if query != "" %}
-                <h1>Results for: "{{query}}"</h1>
-            {% else %}
-                <h1>Highest Rated</h1>
-            {% endif %}
-            
-            <!----recomendations---->
-            {% include 'index/recommends.html' %}
-            
-            <!----pagination system---->
-            {% include 'index/page.html' %}
+        <!----recommendations---->
+        {% include 'index/recommends.html' %}
+        <!----pagination system---->
+        {% include 'index/page.html' %}
             
             <h1>Help to find a cellphone</h1>
-            <div onclick="onclick_event_animation_control('menu',true, true, '1s',false,true)" id="find_a_cell">find with filters</div>
-        </div>
+            <div id="find_a_cell"]
+            onclick="
+            show_hide_anim({menu_filter_screen:'fade_in98',
+                            menu_filter:'moving_in'});
+             "
+            >find with filters</div>
+            <div class="blank_interval"></div>
+   </div>
+</section> 
 
-
-
-
-    </div>
-
-</section>
 {% block filter_script %}
 
 {% endblock %}

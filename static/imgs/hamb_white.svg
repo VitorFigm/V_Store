@@ -1,0 +1,18 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" x="0px" y="0px" width="255px" height="125px" viewBox="0 0 255 125">
+<defs>
+<path id="Symbol_1_0_Layer0_0_1_STROKES" stroke="#FFFFFF" stroke-width="10" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="10" fill="none" d="
+M -116.75 -50
+L 116.75 -50
+M -116.75 0
+L 116.75 0
+M -116.75 50
+L 116.75 50"/>
+</defs>
+
+<g transform="matrix( 1, 0, 0, 1, 127.5,62.5) ">
+<g transform="matrix( 1, 0, 0, 1, 0,0) ">
+<use xlink:href="#Symbol_1_0_Layer0_0_1_STROKES"/>
+</g>
+</g>
+</svg>

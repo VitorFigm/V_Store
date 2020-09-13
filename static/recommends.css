@@ -1,0 +1,103 @@
+section #recommendation{
+    background-color: #2D3277;
+}
+section .product_container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 70%;
+}
+.product{
+    margin: 2rem;
+    width: 12rem;
+    height: 14rem;
+    border-radius: 0.5rem;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.product img{
+    width: 5rem;
+}
+.product a{
+    opacity: 0;
+    font-family: gothic;
+    border-radius: 0.5rem;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.699);
+    width: 12rem;
+    height: 14rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.product a:hover{
+    animation:fade_in_product 0.5s forwards;
+}
+.product a .price{
+    color: rgb(96, 224, 96);
+    margin-bottom: 1rem;
+}
+.product a .name{
+    width: 80%;
+    overflow-wrap: break-word;
+    margin-top: 1rem;
+}
+
+
+@keyframes fade_in_product{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+section #recommendation #page{
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+section #recommendation #page a{
+    color: white;
+    height: 1rem;
+    margin: 0rem 1rem 0rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+    border-width: 0.1rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+}
+section #recommendation #page a:hover{
+    color: tan
+}
+section #recommendation #page .inactivated{
+    color: rgba(253, 253, 253, 0.322);
+}
+section #recommendation #page .inactivated:hover{
+    color: rgba(253, 253, 253, 0.322);
+}
+    
+#find_a_cell{
+    border-radius: 1rem;
+    background-color: white;
+    color:#2D3277;
+    padding: 1rem;
+}
+#find_a_cell:hover{
+    cursor: pointer;
+    background-color: rgb(218, 213, 213);
+    color:#2D3277;
+}

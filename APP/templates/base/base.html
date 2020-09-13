@@ -5,49 +5,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The V store</title>
-    <!--statics-->
-    <link rel="stylesheet" href="{% static 'base_style.css' %}">
-    <link rel="stylesheet" href="{% static 'header__style.css' %}">
-    <link rel="stylesheet" href="{% static 'header_logo_style.css' %}">
-    <link rel="stylesheet" href="{% static 'header_search_style.css' %}">
+    <!-- css -->
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+    <link rel="stylesheet" href="{% static 'header.css' %}">
+    <link rel="stylesheet" href="{% static 'search.css' %}">
+    <link rel="stylesheet" href="{% static 'menu.css' %}">
+    <link rel="stylesheet" href="{% static 'menu_filter.css' %}">
+    <link rel="stylesheet" href="{% static 'resp_to_mobile.css' %}">
+    <link rel="stylesheet" href="{% static 'section.css' %}">
+    <link rel="stylesheet" href="{% static 'recommends.css' %}">
+    <link rel="stylesheet" href="{% static 'animation.css' %}">
     <link rel="stylesheet" href="{% static 'scroll.css' %}">
-    <link rel="stylesheet" href="{% static 'menus.css' %}">
-    <link rel="stylesheet" href="{% static 'header_hamb_style.css' %}">
-    <link rel="stylesheet" href="{% static 'section_style.css' %}">
-
     
+    <!-- javascript--- -->
+    <script src="{% static 'javascript/resize_control.js' %}"> </script>
+    <script src="{% static 'javascript/scroll_control.js' %}"> </script>
+    <script src="{% static 'javascript/show_hide_anim.js' %}"> </script>
+    <script>
+        ///renaming functions
+        function get_el(el){
+            return document.getElementById(el)
+        }
+    </script>
+
 </head>
 
 <body>
 
-<div id="fullscreen_control"> <!---we need this div to keep the background color when we full screen with javascript--->
-    {% include 'base/header.html' %}
-
-    <div id="scroll">
-        V
-    </div>
-    
-
-    <!----MENUS-->
-        {% include 'base/translucid_scr.html' %}
-        {% include 'base/menu1.html' %}
-        {% include 'base/menu2.html' %}
-
-    
-
+    {% include 'base/header_and_search.html' %}
+    {% include 'base/menu.html' %}
+    {% include 'base/menu_filter.html' %}
+    <div id="scroll">V</div>
 
     {% block page %}
 
     {% endblock %}
-</div>
-
     
 </body>
-    <!---javascript_front_end-->
-        <!---control_of_search_and_scroll--->
-    <script src="{% static 'javascript/control_of_search_and_scroll/scroll_event.js' %}"></script>
-    <script src="{% static 'javascript/control_of_search_and_scroll/on_resize_event.js' %}"></script>
-    <script src="{% static 'javascript/control_of_search_and_scroll/animation_control.js' %}"></script>
 
 </html>
 

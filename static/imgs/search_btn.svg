@@ -1,20 +1,20 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 22.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 439.2 427.8" style="enable-background:new 0 0 439.2 427.8;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:#101063;}
-	.st1{fill:none;stroke:#FFFFFF;stroke-width:23;stroke-miterlimit:10;}
-</style>
-<ellipse class="st0" cx="219.6" cy="213.9" rx="219.6" ry="213.9"/>
-<g id="Layer_1_2_">
-	<g>
-		<g id="Layer_1_1_">
-			<line class="st1" x1="262.6" y1="263.7" x2="331.1" y2="327.9"/>
-		</g>
-		<g id="Layer_2_2_">
-			<ellipse class="st1" cx="219.6" cy="213.9" rx="65.5" ry="66"/>
-		</g>
-	</g>
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" x="0px" y="0px" width="294px" height="226px" viewBox="0 0 294 226">
+<defs>
+<path id="Layer0_0_MEMBER_0_MEMBER_0_MEMBER_0_1_STROKES" stroke="#FFFFFF" stroke-width="23" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="10" fill="none" d="
+M 262.6 263.7
+L 331.1 327.9"/>
+
+<path id="Layer0_0_MEMBER_0_MEMBER_1_MEMBER_0_1_STROKES" stroke="#FFFFFF" stroke-width="23" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="10" fill="none" d="
+M 219.6 147.9
+Q 246.75 147.9 265.9 167.2 285.1 186.55 285.1 213.9 285.1 241.25 265.9 260.55 246.7 279.9 219.6 279.9 192.45 279.9 173.3 260.55 154.1 241.25 154.1 213.9 154.1 186.55 173.3 167.2 192.45 147.9 219.6 147.9 Z"/>
+</defs>
+
+<g transform="matrix( 1, 0, 0, 1, -95.6,-124.9) ">
+<use xlink:href="#Layer0_0_MEMBER_0_MEMBER_0_MEMBER_0_1_STROKES"/>
+</g>
+
+<g transform="matrix( 1, 0, 0, 1, -95.6,-124.9) ">
+<use xlink:href="#Layer0_0_MEMBER_0_MEMBER_1_MEMBER_0_1_STROKES"/>
 </g>
 </svg>
