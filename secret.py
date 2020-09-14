@@ -1,1 +1,1 @@
-SECRET_KEY = 'gs_n268n#-84d#wpdgpf1_&7^b!(bj^4c8pvw+o!iupc6d%6@*'
+SECRET_KEY = '23k*g$u#s@xkj5zz3sby0$gde_f-s^!)l@af#*c**7&kp0j0d_'
