@@ -34,10 +34,12 @@
     border-radius: 1rem;
 }
 
-#menu_filter input,#menu_filter select{
-    width: 50%;
+.menu_filter_spaces{
+    width: 70%;
+    height: 2rem;
     font-family: Museo;
     border-radius: 1rem;
+    text-align-last:center
 }
 #menu_filter #submit_btn{
     margin-right: 3rem;
@@ -51,6 +53,7 @@
     border-style: solid;
     border-width: 0.1rem;
     border-color: white;
+    font-family: Museo;
 }
 
 

@@ -1,4 +1,6 @@
 section #recommendation{
+    box-shadow: 0rem -0.15rem #2D3277;
+    -webkit-box-shadow: 0rem -0.15rem 2rem 5rem #2D3277;
     background-color: #2D3277;
 }
 section .product_container{
@@ -8,6 +10,8 @@ section .product_container{
     width: 70%;
 }
 .product{
+    box-shadow: 0rem -0.1rem rgba(255, 255, 255, 0.452);
+    -webkit-box-shadow: 0rem -0.1rem 0.5rem 0.2rem rgba(255, 255, 255, 0.452);
     margin: 2rem;
     width: 12rem;
     height: 14rem;

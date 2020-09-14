@@ -36,3 +36,30 @@
         margin-right: 1rem;
     }
 }
+
+@media (hover : none){
+    section .product_container{
+        display: flex;
+        width: 70%;
+    }
+    section .product{
+        padding-left: 2rem;
+        height: 15rem;
+        width: 100%;
+        justify-content: flex-start;
+    }
+    .product a{
+        justify-content: center;
+        width: 50rem;
+        position: relative;
+        opacity: 1;
+        background-color: transparent;
+        color:black
+    }
+    .product a *{
+        margin-top: 3rem;
+    }
+    .product a .price{
+        color: rgb(72, 139, 72);
+    }
+}

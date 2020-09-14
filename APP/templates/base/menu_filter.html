@@ -26,7 +26,7 @@
     
         <label for="filter_for"> Filter for: </label>
     
-            <select name="filter_for">
+            <select name="filter_for" class="menu_filter_spaces">
                 <option value="better ratings" selected="selected"> 
                     Better ratings 
                 </option>
@@ -43,7 +43,7 @@
             
         <label for="brand"> Brand: </label>
     
-            <select name="brand">
+            <select name="brand" class="menu_filter_spaces">
                 <option value="all" selected="selected">All</option>
                 {% for brand in brand_list %}
                 <option value="{{brand}}">{{brand}}</option>
@@ -51,10 +51,10 @@
             </select>
     
         <label for="minimum_price">Price min</label>
-            <input type="number" name="minimum_price">
+            <input type="number" name="minimum_price" class="menu_filter_spaces">
         
         <label for="maximum_price">Price max</label>
-            <input type="number" name="maximum_price">  
+            <input type="number" name="maximum_price" class="menu_filter_spaces">  
     
             <!---Hidden data-->
         <input type="hidden" name="query" value="{{query}}">
