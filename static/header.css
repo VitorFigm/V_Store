@@ -23,6 +23,5 @@ header #header_btns{
 
 header #header_btns #hamb{
     width: 2rem;
-    content: url('imgs/hamb_white.svg');
     cursor: pointer;
 }
