@@ -17,7 +17,7 @@
             let href = "/"+to_page+"/"+path_final
 
             //go to container after click in button
-            if(!href.includes("#recommendation"))href+="#recommendation"
+            if(!href.includes("#results_title"))href+="#results_title"
 
             if(next)get_el('next_page').href = href
             else get_el('prev_page').href = href
