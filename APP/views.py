@@ -10,7 +10,12 @@ def home(request,page=1):
     
     my_list = p.values.tolist()  ##transfrom dataFrame into python list
 
-    return render(request,'index/index.html',{'products':my_list,'page':page,'total_page':(int(products_df.num_of_products/8)+1),'brand_list':products_df.brand_list,'query':""})
+    return render(request,'index/index.html',{'products':my_list,
+                                                'page':page,
+                                                'total_page':(int(products_df.num_of_products/8)+1),
+                                                'brand_list':products_df.brand_list,
+                                                'query':"",
+                                                'filters':""})
 
 
 
@@ -72,6 +77,11 @@ def filter(request,page=1):
     total_page = (int(p.shape[0]/8)+1)
     p = p.iloc[(page-1)*8:(page)*8] ##select 8 products acording to the page selected
     my_list = p.values.tolist()  ##transfrom dataFrame into python list
-    return render(request,'filter.html',{'products':my_list,'page':page,'total_page':total_page,'brand_list':products_df.brand_list,'query':query})
+    return render(request,'filter.html',{'products':my_list,
+                                        'page':page,
+                                        'total_page':total_page,
+                                        'brand_list':products_df.brand_list,
+                                        'query':query,
+                                        'filters':filter_for})
 
     
