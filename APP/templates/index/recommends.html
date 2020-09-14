@@ -11,7 +11,7 @@
 
 <div class="product_container">
     {% for title,price,image,url in products %}
-        <a class="product" href="{{url}}">
+        <a class="product" href="{{url}}" target="_blank" rel="noopener noreferrer">
             <img src="{% static image %}" id="{{image}}">
             <div id="product_content">
                 <div class="name" id="{{image}}_name">{{title}}</div>
