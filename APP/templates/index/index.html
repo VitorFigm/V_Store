@@ -19,12 +19,10 @@
 
         {% if query != "" %}
             <h1 id="results_title">Results for: "{{query}}"</h1>
-        {% else %}
-            {% if filters != "" %}
+        {% elif filters != "" %}
             <h1 id="results_title">Filter: "{{filters}}"</h1>
-            {% else %}
+        {% else %}
             <h1 id="results_title">Highest Rated</h1>
-            {% endif %}
         {% endif %}    
         <!----recommendations---->
         {% include 'index/recommends.html' %}
