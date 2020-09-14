@@ -51,7 +51,7 @@
         width: 100%;
         justify-content: flex-start;
     }
-    .product a{
+    .product #product_content{
         font-size: 1.2rem;
         justify-content: center;
         width: 50rem;
@@ -60,10 +60,10 @@
         background-color: transparent;
         color:rgb(41, 39, 39)
     }
-    .product a *{
+    .product #product_content *{
         margin-top: 3rem;
     }
-    .product a .price{
+    .product #product_content .price{
         color: rgb(72, 139, 72);
     }
 }

@@ -16,11 +16,12 @@ section .product_container{
     display: flex;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
 }
 .product img{
     width: 5rem;
 }
-.product a{
+.product #product_content{
     opacity: 0;
     font-family: gothic;
     border-radius: 0.5rem;
@@ -33,18 +34,17 @@ section .product_container{
     align-items: center;
     text-align: center;
     color: white;
-    text-decoration: none;
     flex-direction: column;
     justify-content: space-between;
 }
-.product a:hover{
+.product #product_content:hover{
     animation:fade_in_product 0.5s forwards;
 }
-.product a .price{
+.product #product_content .price{
     color: rgb(96, 224, 96);
     margin-bottom: 1rem;
 }
-.product a .name{
+.product #product_content .name{
     width: 80%;
     overflow-wrap: break-word;
     margin-top: 1rem;
@@ -61,34 +61,7 @@ section .product_container{
 }
 
 
-section #recommendation #page{
-    margin-top: 2rem;
-    display: flex;
-    align-items: center;
-}
 
-section #recommendation #page a{
-    color: white;
-    height: 1rem;
-    margin: 0rem 1rem 0rem 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-style: solid;
-    border-width: 0.1rem;
-    padding: 0.5rem;
-    border-radius: 0.5rem;
-    text-decoration: none;
-}
-section #recommendation #page a:hover{
-    color: tan
-}
-section #recommendation #page .inactivated{
-    color: rgba(253, 253, 253, 0.322);
-}
-section #recommendation #page .inactivated:hover{
-    color: rgba(253, 253, 253, 0.322);
-}
     
 #find_a_cell{
     border-radius: 1rem;
