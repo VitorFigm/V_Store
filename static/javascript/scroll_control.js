@@ -12,9 +12,9 @@ window.onscroll = (e) => {
     ////creating args objects
     let _in
     let _out
-    if(window.innerWidth >=800){
-        _in = {search:'moving_in2',options_bellow_search:['fade_in','0.5s']}
-        _out = {search:'moving_out2',options_bellow_search:['fade_out','0.5s']}
+    if(window.innerWidth >=700){
+        _in = {search:'moving_in2',header:'moving_in2'}
+        _out = {search:'moving_out2',header:'moving_out2'}
     }else{
         _in = {header:'moving_in2'}
         _out = {header:'moving_out2'}

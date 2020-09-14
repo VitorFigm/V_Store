@@ -4,6 +4,9 @@
         display: flex;
         justify-content: space-between;
         height: 4rem;
+        background-color: #3D8268;
+        box-shadow: 0rem 0.05rem rgba(0, 0, 0, 0.212);
+        -webkit-box-shadow: 0rem 0.05rem 0.2rem 0.1rem rgba(7, 0, 0, 0.219);
     }
     header #header_btns{
         display: flex;
@@ -49,12 +52,13 @@
         justify-content: flex-start;
     }
     .product a{
+        font-size: 1.2rem;
         justify-content: center;
         width: 50rem;
         position: relative;
         opacity: 1;
         background-color: transparent;
-        color:black
+        color:rgb(41, 39, 39)
     }
     .product a *{
         margin-top: 3rem;

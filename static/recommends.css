@@ -1,8 +1,4 @@
-section #recommendation{
-    box-shadow: 0rem -0.15rem #2D3277;
-    -webkit-box-shadow: 0rem -0.15rem 2rem 5rem #2D3277;
-    background-color: #2D3277;
-}
+
 section .product_container{
     display: flex;
     flex-wrap: wrap;
@@ -97,11 +93,11 @@ section #recommendation #page .inactivated:hover{
 #find_a_cell{
     border-radius: 1rem;
     background-color: white;
-    color:#2D3277;
+    color:#3D8268;
     padding: 1rem;
 }
 #find_a_cell:hover{
     cursor: pointer;
     background-color: rgb(218, 213, 213);
-    color:#2D3277;
+    color:#3D8268;
 }
