@@ -31,13 +31,3 @@ No template was used to design this store
 All of the 594 products were taken from Amazon's database
 
 ## [Visit the web app](https://the-v-store.herokuapp.com/)
-
-# Technologies Used
-### Django:
-To make the back-end
-### Html and CSS:
-To design
-### Javascript:
-To front-end systems
-### Adobe Ilustrator:
-To make the svg images
