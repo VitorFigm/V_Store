@@ -24,6 +24,7 @@ Front-end and back-end of a store simulator made in django, shows Amazon's cell 
 
 <br>
 <br>
+
 # Design made entirely by me
 No template was used to design this store
 
