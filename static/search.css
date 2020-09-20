@@ -8,7 +8,12 @@
     opacity: 0;
     cursor: pointer;
 }
-
+#search_close_btn{
+    position: relative;
+    width: 2rem;
+    top: 5rem;
+    left: calc(50% - 1rem);
+}
 #search{
     box-shadow: 0rem 0.05rem rgba(0, 0, 0, 0.212);
     -webkit-box-shadow: 0rem 0.05rem 0.2rem 0.1rem rgba(7, 0, 0, 0.219);
