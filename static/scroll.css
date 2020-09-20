@@ -1,0 +1,13 @@
+#scroll{
+    position: fixed;
+    top: calc(100vh - 3rem);
+    left: calc(50vw - 0.5rem);
+    color: white;
+    animation: scroll_anim 1s infinite;
+}
+
+@keyframes scroll_anim{
+    50%{
+        transform: translateY(-2rem);
+    }
+}

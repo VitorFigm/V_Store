@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The V store</title>
+    <!-- css -->
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+    <link rel="stylesheet" href="{% static 'header.css' %}">
+    <link rel="stylesheet" href="{% static 'search.css' %}">
+    <link rel="stylesheet" href="{% static 'menu.css' %}">
+    <link rel="stylesheet" href="{% static 'menu_filter.css' %}">
+    <link rel="stylesheet" href="{% static 'section.css' %}">
+    <link rel="stylesheet" href="{% static 'recommends.css' %}">
+    <link rel="stylesheet" href="{% static 'page.css' %}">
+    <link rel="stylesheet" href="{% static 'animation.css' %}">
+    <link rel="stylesheet" href="{% static 'scroll.css' %}">
+
+    <link rel="stylesheet" href="{% static 'resp_to_mobile.css' %}">
+    
+    <!-- javascript--- -->
+    <script src="{% static 'javascript/resize_control.js' %}"> </script>
+    <script src="{% static 'javascript/scroll_control.js' %}"> </script>
+    <script src="{% static 'javascript/show_hide_anim.js' %}"> </script>
+    <script>
+        ///renaming functions
+        function get_el(el){
+            return document.getElementById(el)
+        }
+    </script>
+
+</head>
+
+<body>
+
+    {% include 'base/header_and_search.html' %}
+    {% include 'base/menu.html' %}
+    {% include 'base/menu_filter.html' %}
+    <div id="scroll">V</div>
+
+    {% block page %}
+
+    {% endblock %}
+    
+</body>
+
+</html>
+
+
+
+
+
+

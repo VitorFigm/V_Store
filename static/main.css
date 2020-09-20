@@ -1,0 +1,40 @@
+@font-face{
+    src:url("fonts/PathwayGothicOne-Regular.ttf");
+    font-family: gothic;
+}
+@font-face{
+    src:url("fonts/ShadowsIntoLight-Regular.ttf");
+    font-family: shadow;
+}
+@font-face{
+    src:url("fonts/MuseoModerno-VariableFont_wght.ttf");
+    font-family: Museo;
+}
+
+body{
+    background-color:#3D8268;
+    width:100%;
+    margin:0px;
+    font-family: Museo;
+    font-size:14pt;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 0.5rem;
+}
+::-webkit-scrollbar-track{
+    background: rgba(255, 255, 255, 0.178);
+}
+
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.37); 
+    border-radius: 1rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.705); 
+}
