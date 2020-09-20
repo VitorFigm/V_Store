@@ -1,1 +1,0 @@
-web: gunicorn V_store.wsgi
