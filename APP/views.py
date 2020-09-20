@@ -40,6 +40,7 @@ def filter(request,page=1):
     query_only = bool(query_only)
     if(query_only):
         p = p.sort_values(by='rating',ascending=False)  ##sorting by rate
+        filter_for = ""
     else:
         ####brand filtering
         brand = request.GET['brand']
