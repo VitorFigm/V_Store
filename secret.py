@@ -1,1 +1,0 @@
-SECRET_KEY = 'p6!bf$qp)8ef-n#!@e6bcy3&9r9s*)ix4aw1s!(d4em#gn@usp'
