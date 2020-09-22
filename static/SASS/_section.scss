@@ -1,0 +1,29 @@
+section{
+    width: 100%;
+    color: white;
+    position: absolute;
+    #intro{
+        height: 100vh;
+    }
+    .container{
+        text-align: center;
+        width: 100%;
+        flex-direction: column;
+        @include XYcenter($flex:true);
+        h1{
+            margin-left: 2rem;
+            font-family: shadow;
+            margin-right: 2rem;
+            font-size: 3rem ;
+        }
+        p{
+            font-size: 1.6rem ;
+            font-family: shadow;
+            color: #ebebeb;
+        }
+    }
+    .blank_interval{
+        height: 30vh;
+        width: 100%;
+    }
+}

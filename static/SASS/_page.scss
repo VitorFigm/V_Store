@@ -1,0 +1,30 @@
+section{
+    #recommendation{
+        #page{
+            margin-top: 2rem;
+            display: flex;
+            align-items: center;
+            a{
+                color: white;
+                height: 1rem;
+                margin: 0rem 1rem 0rem 1rem;
+                @include XYcenter($flex:true);
+                border-style: solid;
+                border-width: 0.1rem;
+                padding: 0.5rem;
+                border-radius: 0.5rem;
+                transition: color 0.5s;
+                &:hover{
+                    color: tan;
+                }
+            }
+            .inactivated{
+                color: rgba(253, 253, 253, 0.322);
+                &:hover{
+                    color: rgba(253, 253, 253, 0.322);
+                }
+            }
+
+        }
+    }
+}

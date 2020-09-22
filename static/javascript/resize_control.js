@@ -1,12 +1,14 @@
 window.higher_res = window.innerWidth > 700
 
 window.onresize = ()=>{
-    if(this.innerWidth>700 && !window.higher_res  ){
-        show_hide_anim({search:'moving_in2',header:'moving_in2',search_translucid_screen:'fade_out98'})
-    }
-    if(this.innerWidth<700 && window.higher_res){
-        show_hide_anim({search:'moving_out2',header:'moving_in2',search_translucid_screen:'fade_out98'})
-    }
 
+    const changed_res = this.innerWidth > 700 != window.higher_res 
+    
+    if(changed_res){
+        initial_state('search');
+        initial_state('header');
+        initial_state('search_translucid_screen')
+    }
+    ///save screeen state
     window.higher_res = window.innerWidth > 700
 }

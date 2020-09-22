@@ -1,0 +1,74 @@
+#menu_filter_screen{
+    flex-direction: column;
+    @include XYcenter($flex:true);
+    @include screen_to_show;
+    z-index: 999;
+    #menu_filter_onclick{
+        @include screen_click;
+    }
+    .filter_close_btn{
+        @include screen_btn;
+    }    
+    #menu_filter{
+        justify-content: space-evenly;
+        flex-direction: column;
+        @include XYcenter($flex:true, $justify:false);
+        @include shadow($color:2);
+        background-color: $blue;
+        color: white;
+        z-index: 999;
+        width: 20rem;
+        height: 80%;
+        border-radius: 1rem;
+        @include state_transform(0vh, $yi:-100vh);
+        .menu_filter_spaces{
+            appearance: none;
+            width: 70%;
+            height: 2rem;
+            font-family: Museo;
+            border-radius: 1rem;
+            text-align-last:center;
+            /* remove default arrows in input */
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+            }
+            /* mozilla version */
+            &[type=number] {
+                -moz-appearance: textfield;
+            }
+        }
+        #submit_btn{
+            margin-right: 3rem;
+            align-self: flex-end;
+            width: 6rem;
+            padding: 0.5rem;
+            background-color: transparent;
+            color: white;
+            font-size: 1rem;
+            border-radius: 1rem;
+            border-style: solid;
+            border-width: 0.1rem;
+            border-color: white;
+            font-family: Museo;
+            cursor: pointer;
+        }
+        #error_msg_box{
+            width: 30rem;
+            height: 9rem;
+            background-color: #ff3333;
+            position: absolute;
+            display: none;
+            @include XYcenter;
+            border-radius: 1rem;
+            img{
+                top:0rem;
+                position: absolute;
+                left:0rem
+            }
+        }
+
+    }
+}
+

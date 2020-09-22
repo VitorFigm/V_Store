@@ -7,26 +7,27 @@
 </script>
 
 
-<div id="menu_filter_screen">
+<div id="menu_filter_screen" class="initial_state">
     <div id="menu_filter_onclick" 
     onclick="
-        show_hide_anim({menu_filter_screen:'fade_out98',
-                        menu_filter:'moving_out'});
+    initial_state('menu_filter_screen')
+    initial_state('menu_filter')
     "
     ></div>
 
     <img src="{% static 'imgs/close_btn.svg' %}" class="filter_close_btn"
     onclick="
-        show_hide_anim({menu_filter_screen:'fade_out98',
-                        menu_filter:'moving_out'});
+    initial_state('menu_filter_screen')
+    initial_state('menu_filter')
     ">
 
-    <form action="/filter" id="menu_filter" onclick="error_msg_close()">
+    <form action="/filter" id="menu_filter" class="initial_state" onclick="error_msg_close()">
         
     
         <label for="filter_for"> Filter for: </label>
     
             <select name="filter_for" class="menu_filter_spaces">
+
                 <option value="better ratings" selected="selected"> 
                     Better ratings 
                 </option>

@@ -1,0 +1,33 @@
+header{
+    display: grid;
+    grid-template-columns: 8.5rem $search_width 8.5rem;
+    grid-template-rows: 2rem $search_height 4rem;
+    grid-template-areas:    '.     .      .'
+                            'logo . header_btns'
+                         '. search_btns .';
+    width: 100%;
+    justify-items: center;
+    align-items: center;
+    position: fixed;
+    z-index: 2;
+
+    @include state_transform(-15rem);
+
+    #logo{
+        width: 2rem;
+        content: url('imgs/logo_white.svg');
+        grid-area: logo;
+    }
+
+    #header_btns{
+        width: 2rem;
+        grid-area: header_btns;
+        
+        #hamb{
+            width: 2rem;
+            cursor: pointer;
+        }
+
+    }
+
+}

@@ -1,20 +1,22 @@
 {% load static %}
-<header id="header">
+<header id="header" class="initial_state">
     <a href="/" id="logo"> </a>
 
         <div id="options_bellow_search">
             <a href="" id="contact">Contact me</a>
         </div>
        
-     <div id="header_btns">
-        <img src="{% static 'imgs/search_btn.svg' %}" id="search_mobile_btn" 
-        onclick="show_hide_anim({
-        search:'moving_in', 
-        search_translucid_screen:'fade_in98',
-        })">
+        <div id="header_btns">
+            <img src="{% static 'imgs/search_btn.svg' %}" id="search_mobile_btn" 
+            onclick="
+            final_state('search');
+            final_state('search_translucid_screen');
+            ">
 
-        <img src="{% static 'imgs/hamb_white.svg' %} " id="hamb" onclick="show_hide_anim({menu_screen:'fade_in', menu:'moving_in'})">
-    </div>
+            <img tabindex="1" src="{% static 'imgs/hamb_white.svg' %} " id="hamb" 
+            onclick="final_state('menu_screen');
+                    final_state('menu')">
+        </div>
    
 
 </header>
@@ -35,15 +37,15 @@
     <input type="hidden" name="query_only" value="True">
 </form>
 
-<div id="search_translucid_screen" 
-    onclick="show_hide_anim({
-    search:'moving_out',
-     search_translucid_screen:'fade_out',
-     })">
+<div id="search_translucid_screen" class="initial_state" 
+    onclick="
+    initial_state('search')
+    initial_state('search_translucid_screen')
+    ">
      <img src="{% static 'imgs/close_btn.svg' %}" id="search_close_btn">
     </div>
     
-    <div id="search">
+    <div id="search" class="initial_state">
         <input type="text" id="search_input" onkeydown="query_with_search_bar(event)">
         <img src="{% static 'imgs/search_btn2.svg' %}">
 </div>

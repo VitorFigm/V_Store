@@ -1,0 +1,33 @@
+#menu_screen{
+    flex-direction: column;
+    @include XYcenter($flex:true);
+    z-index: 999;
+    @include screen_to_show;
+    #screen_to_onclick_event{
+        @include screen_click;
+        z-index: 1;
+    }
+    #menu{
+        flex-direction: column;
+        @include XYcenter($flex:true,$justify:false);
+        z-index: 2;
+        @include state_transform(0vh, $yi:-100vh);
+        #menu_close_btn{
+            @include screen_btn;
+        }
+        #menu_items{    
+            border-radius: 1rem;
+            background-color: $blue;
+            width: 40vw;
+            height: 60vh;
+            flex-direction: column;
+            @include XYcenter($flex:true, $justify:false);
+            @include shadow($color:2);
+            justify-content: space-around;
+            @media (max-width:600px){
+                width: 80vw;
+            }
+        }
+    }
+}
+

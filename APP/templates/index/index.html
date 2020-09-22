@@ -17,13 +17,12 @@
    <div id="recommendation" class="container">
         <div class="blank_interval"></div>
 
-        {% if query != "" %}
-            <h1 id="results_title">Results for: "{{query}}"</h1>
-        {% elif filters != "" %}
-            <h1 id="results_title">Filter: "{{filters}}"</h1>
-        {% else %}
+        {% if query == "" and filters == "" %}
             <h1 id="results_title">Highest Rated</h1>
-        {% endif %}    
+        {% else %}
+            <h1 id="results_title">Results for: "{{query}}" {{filters}}</h1>
+        {% endif %}
+
         <!----recommendations---->
         {% include 'index/recommends.html' %}
         <!----pagination system---->
@@ -32,8 +31,8 @@
             <h1>Help to find a cellphone</h1>
             <div id="find_a_cell"]
             onclick="
-            show_hide_anim({menu_filter_screen:'fade_in98',
-                            menu_filter:'moving_in'});
+            final_state('menu_filter_screen')
+            final_state('menu_filter')
              "
             >find with filters</div>
             <div class="blank_interval"></div>

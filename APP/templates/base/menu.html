@@ -1,11 +1,17 @@
 {% load static %}
 
-<div id="menu_screen">
-    <div id="screen_to_onclick_event" onclick="show_hide_anim({menu_screen:'fade_out', menu:'moving_out'})"></div>
-    <div id="menu">
-        <img src="{% static 'imgs/close_btn.svg' %}" id="menu_close_btn" 
-        onclick="show_hide_anim(
-            {menu_screen:'fade_out', menu:'moving_out'})">
+<div id="menu_screen" class="initial_state">
+    <div id="screen_to_onclick_event" 
+    onclick=
+    "initial_state('menu_screen');
+    initial_state('menu')"></div>
+
+
+    <div id="menu" class="initial_state">
+        <img src="{% static 'imgs/close_btn.svg' %}" id="menu_close_btn"
+        onclick=
+        "initial_state('menu_screen');
+        initial_state('menu')">
         <div id="menu_items">
             <a href="">Visit my Website</a>
             <a href="">Visit my github</a>

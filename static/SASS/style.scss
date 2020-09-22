@@ -1,0 +1,122 @@
+//variables
+$search_width:calc(100% - 17rem);
+$search_height:3.5rem;
+$green:#3D8268;
+$blue:#2D3277;
+
+
+//mixin
+@mixin XYcenter($flex:false,$justify:true,$align:true){
+    @if($flex){
+        display: flex;
+    }
+    @if($justify){
+        justify-content: center;
+    }
+    @if($align){
+        align-items: center;
+    }
+}
+
+@mixin screen_to_show{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.527);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    opacity: 0;
+    
+    transition: opacity 1s,visibility 1s;
+    visibility: hidden;
+    &:not(.initial_state){
+        opacity: 1;
+        visibility: visible;
+    }
+}
+@mixin screen_click{
+    cursor: pointer;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+}
+@mixin screen_btn{
+    cursor: pointer;
+    position: relative;
+    top: -2rem;
+    width: 2rem;
+}
+
+
+@mixin shadow($color:1,$shadow_type:1){
+    @if($color == 1){
+        $color:rgba(0, 0, 0, 0.212)
+    }
+    @if($color == 2){
+        $color:rgba(255, 255, 255, 0.274);
+    }
+    @if($color == 3){
+        $color:rgba(255, 255, 255, 0.452);
+    }
+    @if($shadow_type == 1){
+        box-shadow: 0rem 0.05rem $color;
+        -webkit-box-shadow: 0rem 0.05rem 0.2rem 0.1rem $color;
+    }
+    @if($shadow_type == 2){
+        box-shadow: 0rem -0.1rem $color;
+        -webkit-box-shadow: 0rem -0.1rem 0.5rem 0.2rem $color;
+    }
+    
+}
+
+
+
+//state_controll
+
+@mixin state_transform($Y, $time:1s,$yi:0){
+    @if($yi != 0){
+        transform: translateY($yi);
+    }
+    transition: transform $time;
+    &:not(.initial_state){
+        transform: translateY($Y);
+    }
+}
+
+//fonts
+@font-face{
+    src:url("fonts/PathwayGothicOne-Regular.ttf");
+    font-family: gothic;
+}
+@font-face{
+    src:url("fonts/ShadowsIntoLight-Regular.ttf");
+    font-family: shadow;
+}
+@font-face{
+    src:url("fonts/MuseoModerno-VariableFont_wght.ttf");
+    font-family: Museo;
+}
+
+//main_parts
+body{
+    background-color:$green;
+    width:100%;
+    margin:0px;
+    font-family: Museo;
+    font-size:14pt;
+    a{
+        text-decoration: none;
+        color: white;
+    }
+}
+
+///code
+@import 'scroll';
+@import 'header';
+@import 'search';
+@import 'menu';
+@import '_menu_filter';
+@import 'section';
+@import 'recommends';
+@import 'page';
+
+@import 'resp_to_mobile'
