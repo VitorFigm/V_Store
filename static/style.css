@@ -116,6 +116,7 @@ header #header_btns #hamb {
   outline: none;
 }
 #search img {
+  cursor: pointer;
   margin-left: 1rem;
   width: 2rem;
 }

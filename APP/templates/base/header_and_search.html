@@ -25,7 +25,7 @@
 
 <script>
     function query_with_search_bar(event){
-        if(event.keyCode==13||event.clientX!=undefined){ //detect enter key to submit the form
+        if(event.keyCode==13||event.clientX!=undefined){ //detect enter key to submit the form or if it is a click event
             get_el('query_input_form').value = get_el('search_input').value
             document.query_form.submit()
         }
@@ -47,5 +47,5 @@
     
     <div id="search" class="initial_state">
         <input type="text" id="search_input" onkeydown="query_with_search_bar(event)">
-        <img src="{% static 'imgs/search_btn2.svg' %}">
+        <img src="{% static 'imgs/search_btn2.svg' %}" onclick="query_with_search_bar(event)">
 </div>
